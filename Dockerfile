@@ -4,6 +4,6 @@ WORKDIR /opt
 ADD / /opt
 RUN pip install -r requirements.txt
 
-ENV NUMBER=6
+URLS=''
 
 ENTRYPOINT python -u /opt/urls.py $URLS
