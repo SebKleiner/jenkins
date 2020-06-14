@@ -4,6 +4,6 @@ WORKDIR /opt
 ADD / /opt
 RUN pip install -r requirements.txt
 
-URLS=''
+URLS=https:'//httpstat.us/'
 
 ENTRYPOINT python -u /opt/urls.py $URLS
