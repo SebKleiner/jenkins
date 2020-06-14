@@ -8,10 +8,10 @@ def main():
         try:
             print(f"====== Contents: {url} ======")
             r = urllib.request.urlopen(url).read()
-	        print(r)
-	    except ValueError:
-	        print('There is an error!')
-	        sys.exit()
+            print(r)
+        except ValueError:
+            print('There is an error!')
+            sys.exit()
 
 
 if __name__ == "__main__":
