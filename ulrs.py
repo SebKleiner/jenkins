@@ -1,13 +1,17 @@
-import requests
+import urllib.request
 import sys
 
 
 def main():
     urls = sys.argv[1].split(",")
     for url in urls:
-        print(f"====== Contents: {url} ======")
-        r = requests.get(url)
-        print(r.text)
+	try:
+        	print(f"====== Contents: {url} ======")
+        	r = urllib.request.urlopen(url).read()
+		print(r)
+	except ValueError:
+		print('There is an error!')
+		sys.exit()
 
 
 if __name__ == "__main__":
