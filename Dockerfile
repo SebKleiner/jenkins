@@ -4,4 +4,4 @@ WORKDIR /opt
 ADD / /opt
 RUN pip install -r requirements.txt
 
-ENTRYPOINT ["python", "-u", "/opt/urls.py", "6"]
+ENTRYPOINT ["python", "-u", "/opt/ulrs.py", "6"]
