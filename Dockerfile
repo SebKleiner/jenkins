@@ -6,4 +6,4 @@ RUN pip install -r requirements.txt
 
 ENV NUMBER=6
 
-ENTRYPOINT python -u /opt/main.py $NUMBER
+ENTRYPOINT python -u /opt/urls.py $URLS
