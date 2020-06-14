@@ -3,7 +3,7 @@ import sys
 
 
 def main():
-    urls = sys.argv[1].split(,)
+    urls = sys.argv[1].split(",")
     for url in urls:
         print(f"====== Contents: {url} ======")
         r = requests.get(url)
