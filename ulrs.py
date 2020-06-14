@@ -1,9 +1,9 @@
 import requests
-import os
+import sys
 
 
 def main():
-    urls = os.environ[1].split(',')
+    urls = sys.argv[1]
     for url in urls:
         print(f"====== Contents: {url} ======")
         r = requests.get(url)
