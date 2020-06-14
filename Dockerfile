@@ -4,4 +4,6 @@ WORKDIR /opt
 ADD / /opt
 RUN pip install -r requirements.txt
 
-ENTRYPOINT ["python", "-u", "/opt/main.py", "6"]
+ENV NUMBER=6
+
+ENTRYPOINT python, -u, /opt/main.py, $NUMBER
