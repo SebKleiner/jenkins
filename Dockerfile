@@ -4,4 +4,6 @@ WORKDIR /opt
 ADD / /opt
 RUN pip install -r requirements.txt
 
-ENTRYPOINT ["python", "-u", "/opt/ulrs.py", "6"]
+ENV urls=https://www.infobae.com/america/
+
+ENTRYPOINT python -u /opt/ulrs.py $urls
